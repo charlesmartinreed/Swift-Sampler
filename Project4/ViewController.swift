@@ -8,14 +8,18 @@
 
 import UIKit
 import PDFKit
+import SafariServices
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, PDFViewDelegate {
 
     //MARK:- Properties
     let pdfView = PDFView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //set self to delegate so that we can handle loading up Safari
+        pdfView.delegate = self
         
         //setting up our PDFView and making it fill the enclosing space
         pdfView.translatesAutoresizingMaskIntoConstraints = false
@@ -113,6 +117,18 @@ class ViewController: UIViewController {
         
         present(vc, animated: true, completion: nil)
         
+    }
+    
+    //MARK:- Safari Services protocol method
+    func pdfViewWillClick(onLink sender: PDFView, with url: URL) {
+        
+        //create the Safari view and load up the specified web page
+        let vc = SFSafariViewController(url: url)
+        
+        //this will cause Safari to open a smaller window, centered in the middle of the screen, over our current view
+        vc.modalPresentationStyle = .formSheet
+        
+        present(vc, animated: true, completion: nil)
     }
 
 }
