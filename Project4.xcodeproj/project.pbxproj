@@ -12,6 +12,18 @@
 		8C9E8F40213F2C090069A068 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C9E8F3E213F2C090069A068 /* Main.storyboard */; };
 		8C9E8F42213F2C0B0069A068 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8C9E8F41213F2C0B0069A068 /* Assets.xcassets */; };
 		8C9E8F45213F2C0B0069A068 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C9E8F43213F2C0B0069A068 /* LaunchScreen.storyboard */; };
+		8C9E8F57213F2C510069A068 /* hacking-with-watchos.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 8C9E8F4C213F2C4E0069A068 /* hacking-with-watchos.pdf */; };
+		8C9E8F58213F2C510069A068 /* server-side-swift.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 8C9E8F4D213F2C4F0069A068 /* server-side-swift.pdf */; };
+		8C9E8F59213F2C510069A068 /* practical-ios-10.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 8C9E8F4E213F2C4F0069A068 /* practical-ios-10.pdf */; };
+		8C9E8F5A213F2C510069A068 /* hacking-with-tvos.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 8C9E8F4F213F2C4F0069A068 /* hacking-with-tvos.pdf */; };
+		8C9E8F5B213F2C510069A068 /* pro-swift.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 8C9E8F50213F2C4F0069A068 /* pro-swift.pdf */; };
+		8C9E8F5C213F2C510069A068 /* swift-coding-challenges.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 8C9E8F51213F2C500069A068 /* swift-coding-challenges.pdf */; };
+		8C9E8F5D213F2C510069A068 /* beyond-code.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 8C9E8F52213F2C500069A068 /* beyond-code.pdf */; };
+		8C9E8F5E213F2C510069A068 /* hacking-with-macos.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 8C9E8F53213F2C500069A068 /* hacking-with-macos.pdf */; };
+		8C9E8F5F213F2C510069A068 /* practical-ios-11.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 8C9E8F54213F2C500069A068 /* practical-ios-11.pdf */; };
+		8C9E8F60213F2C510069A068 /* hacking-with-swift.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 8C9E8F55213F2C500069A068 /* hacking-with-swift.pdf */; };
+		8C9E8F61213F2C510069A068 /* objective-c-for-swift-developers.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 8C9E8F56213F2C510069A068 /* objective-c-for-swift-developers.pdf */; };
+		8C9E8F63213F2CB10069A068 /* FilesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9E8F62213F2CB10069A068 /* FilesViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +34,18 @@
 		8C9E8F41213F2C0B0069A068 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8C9E8F44213F2C0B0069A068 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8C9E8F46213F2C0B0069A068 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8C9E8F4C213F2C4E0069A068 /* hacking-with-watchos.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "hacking-with-watchos.pdf"; sourceTree = "<group>"; };
+		8C9E8F4D213F2C4F0069A068 /* server-side-swift.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "server-side-swift.pdf"; sourceTree = "<group>"; };
+		8C9E8F4E213F2C4F0069A068 /* practical-ios-10.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "practical-ios-10.pdf"; sourceTree = "<group>"; };
+		8C9E8F4F213F2C4F0069A068 /* hacking-with-tvos.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "hacking-with-tvos.pdf"; sourceTree = "<group>"; };
+		8C9E8F50213F2C4F0069A068 /* pro-swift.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "pro-swift.pdf"; sourceTree = "<group>"; };
+		8C9E8F51213F2C500069A068 /* swift-coding-challenges.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "swift-coding-challenges.pdf"; sourceTree = "<group>"; };
+		8C9E8F52213F2C500069A068 /* beyond-code.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "beyond-code.pdf"; sourceTree = "<group>"; };
+		8C9E8F53213F2C500069A068 /* hacking-with-macos.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "hacking-with-macos.pdf"; sourceTree = "<group>"; };
+		8C9E8F54213F2C500069A068 /* practical-ios-11.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "practical-ios-11.pdf"; sourceTree = "<group>"; };
+		8C9E8F55213F2C500069A068 /* hacking-with-swift.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "hacking-with-swift.pdf"; sourceTree = "<group>"; };
+		8C9E8F56213F2C510069A068 /* objective-c-for-swift-developers.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "objective-c-for-swift-developers.pdf"; sourceTree = "<group>"; };
+		8C9E8F62213F2CB10069A068 /* FilesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilesViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,12 +80,32 @@
 			children = (
 				8C9E8F3A213F2C090069A068 /* AppDelegate.swift */,
 				8C9E8F3C213F2C090069A068 /* ViewController.swift */,
+				8C9E8F62213F2CB10069A068 /* FilesViewController.swift */,
 				8C9E8F3E213F2C090069A068 /* Main.storyboard */,
 				8C9E8F41213F2C0B0069A068 /* Assets.xcassets */,
 				8C9E8F43213F2C0B0069A068 /* LaunchScreen.storyboard */,
+				8C9E8F65213F2D4D0069A068 /* PDFs */,
 				8C9E8F46213F2C0B0069A068 /* Info.plist */,
 			);
 			path = Project4;
+			sourceTree = "<group>";
+		};
+		8C9E8F65213F2D4D0069A068 /* PDFs */ = {
+			isa = PBXGroup;
+			children = (
+				8C9E8F52213F2C500069A068 /* beyond-code.pdf */,
+				8C9E8F53213F2C500069A068 /* hacking-with-macos.pdf */,
+				8C9E8F55213F2C500069A068 /* hacking-with-swift.pdf */,
+				8C9E8F4F213F2C4F0069A068 /* hacking-with-tvos.pdf */,
+				8C9E8F4C213F2C4E0069A068 /* hacking-with-watchos.pdf */,
+				8C9E8F56213F2C510069A068 /* objective-c-for-swift-developers.pdf */,
+				8C9E8F4E213F2C4F0069A068 /* practical-ios-10.pdf */,
+				8C9E8F54213F2C500069A068 /* practical-ios-11.pdf */,
+				8C9E8F50213F2C4F0069A068 /* pro-swift.pdf */,
+				8C9E8F4D213F2C4F0069A068 /* server-side-swift.pdf */,
+				8C9E8F51213F2C500069A068 /* swift-coding-challenges.pdf */,
+			);
+			path = PDFs;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -122,9 +166,20 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8C9E8F5D213F2C510069A068 /* beyond-code.pdf in Resources */,
+				8C9E8F5B213F2C510069A068 /* pro-swift.pdf in Resources */,
+				8C9E8F60213F2C510069A068 /* hacking-with-swift.pdf in Resources */,
+				8C9E8F5F213F2C510069A068 /* practical-ios-11.pdf in Resources */,
+				8C9E8F57213F2C510069A068 /* hacking-with-watchos.pdf in Resources */,
+				8C9E8F5E213F2C510069A068 /* hacking-with-macos.pdf in Resources */,
+				8C9E8F58213F2C510069A068 /* server-side-swift.pdf in Resources */,
 				8C9E8F45213F2C0B0069A068 /* LaunchScreen.storyboard in Resources */,
+				8C9E8F5A213F2C510069A068 /* hacking-with-tvos.pdf in Resources */,
+				8C9E8F61213F2C510069A068 /* objective-c-for-swift-developers.pdf in Resources */,
 				8C9E8F42213F2C0B0069A068 /* Assets.xcassets in Resources */,
+				8C9E8F5C213F2C510069A068 /* swift-coding-challenges.pdf in Resources */,
 				8C9E8F40213F2C090069A068 /* Main.storyboard in Resources */,
+				8C9E8F59213F2C510069A068 /* practical-ios-10.pdf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -136,6 +191,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8C9E8F3D213F2C090069A068 /* ViewController.swift in Sources */,
+				8C9E8F63213F2CB10069A068 /* FilesViewController.swift in Sources */,
 				8C9E8F3B213F2C090069A068 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
