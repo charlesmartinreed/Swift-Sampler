@@ -14,9 +14,19 @@ class ViewController: UIViewController, PDFViewDelegate {
 
     //MARK:- Properties
     let pdfView = PDFView()
+    let textView = UITextView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //MARK:- Creating our segmented control
+        let viewMode = UISegmentedControl(items: ["PDF", "Text"])
+        viewMode.addTarget(self, action: #selector(changeViewMode), for: .valueChanged)
+        viewMode.selectedSegmentIndex = 0
+        
+        //add the seg control to the the nav bar
+        navigationItem.rightBarButtonItem = UIBarButtonItem(customView: viewMode)
+        navigationItem.rightBarButtonItem?.width = 150
         
         //set self to delegate so that we can handle loading up Safari
         pdfView.delegate = self
@@ -29,6 +39,21 @@ class ViewController: UIViewController, PDFViewDelegate {
         pdfView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
         pdfView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
         pdfView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
+        
+        //give textView same autolayout constraints as pdfView
+        textView.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(textView)
+        
+        textView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
+        textView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
+        textView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
+        textView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
+        
+        //disable, hide and modify text container inset property for textView
+        textView.isEditable = false
+        textView.isHidden = true
+        textView.textContainerInset = UIEdgeInsets(top: 0, left: 20, bottom: 20, right: 20)
+        
         
         //create our bar button items
         //previous and next can go straight to the PDFView
@@ -63,11 +88,70 @@ class ViewController: UIViewController, PDFViewDelegate {
             //force the PDF back to the cover page - generally PDF's open on the last page you were on. This is probably something you'd want in a production app though.
             pdfView.goToFirstPage(nil)
             
+            //this won't be initially visible, but the user can toggle the view on and off as desired
+            //loadText()
+            
             //display the documents title if there's space - i.e, if it's the iPad
             if UIDevice.current.userInterfaceIdiom == .pad {
                 title = name
             }
         }
+    }
+    
+    func loadText() {
+        // read the page count
+        guard let pageCount = pdfView.document?.pageCount else { return }
+        let documentContent = NSMutableAttributedString()
+        
+        for i in 1 ..< pageCount {
+            
+            //find a page and the attributed strings within
+            guard let page = pdfView.document?.page(at: i) else { continue }
+            guard let pageContent = page.attributedString else { continue }
+            
+            //add line breaks between each page
+            let spacer = NSAttributedString(string: "\n\n")
+            
+            //add the page contents and the spacer to the attributed string
+            documentContent.append(spacer)
+            documentContent.append(pageContent)
+        }
+        
+        //removing the footer tex, for example: "www.hackingwithswift.com 24".
+        let pattern = "www.hackingwithswift.com [0-9]{1,2}"
+        let regex = try? NSRegularExpression(pattern: pattern)
+        
+        //range of the entire document word count
+        let range = NSMakeRange(0, documentContent.string.utf16.count)
+        
+        if let matches = regex?.matches(in: documentContent.string, options: [], range: range) {
+            //reverse, otherwise replacing one string will move the position of other, unchecked, strings
+            for match in matches.reversed() {
+                documentContent.replaceCharacters(in: match.range, with: "")
+            }
+        }
+        
+        
+        
+        //put the attributed text string in the textView for viewing
+        textView.attributedText = documentContent
+        
+    }
+    
+    //MARK:- PDFView or TextView method
+    @objc func changeViewMode(segmentedControl: UISegmentedControl) {
+        
+        if segmentedControl.selectedSegmentIndex == 0 {
+            //show the pdfView
+            pdfView.isHidden = false
+            textView.isHidden = true
+        } else {
+            //show the textView
+            pdfView.isHidden = true
+            textView.isHidden = false
+            loadText()
+        }
+        
     }
     
     //MARK: - Search through books method
