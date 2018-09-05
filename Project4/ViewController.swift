@@ -10,7 +10,7 @@ import UIKit
 import PDFKit
 import SafariServices
 
-class ViewController: UIViewController, PDFViewDelegate {
+class ViewController: UIViewController, PDFViewDelegate, PDFDocumentDelegate {
 
     //MARK:- Properties
     let pdfView = PDFView()
@@ -68,6 +68,9 @@ class ViewController: UIViewController, PDFViewDelegate {
         //set the pdf to scale to size automatically
         pdfView.autoScales = true
         
+        //start with Practical iOS 11 preloaded
+        load("Practical iOS 11")
+        
     }
 
     //MARK: - Book loading methods
@@ -83,6 +86,7 @@ class ViewController: UIViewController, PDFViewDelegate {
         if let document = PDFDocument(url: path) {
             
             //assign it to our PDF view
+            document.delegate = self //document asks view what class should be used to render pages
             pdfView.document = document
             
             //force the PDF back to the cover page - generally PDF's open on the last page you were on. This is probably something you'd want in a production app though.
@@ -213,6 +217,11 @@ class ViewController: UIViewController, PDFViewDelegate {
         vc.modalPresentationStyle = .formSheet
         
         present(vc, animated: true, completion: nil)
+    }
+    
+    //MARK:- Sample watermark class method
+    func classForPage() -> AnyClass {
+        return SampleWatermark.self
     }
 
 }

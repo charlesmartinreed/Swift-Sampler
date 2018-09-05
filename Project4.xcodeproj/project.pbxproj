@@ -24,6 +24,7 @@
 		8C9E8F60213F2C510069A068 /* hacking-with-swift.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 8C9E8F55213F2C500069A068 /* hacking-with-swift.pdf */; };
 		8C9E8F61213F2C510069A068 /* objective-c-for-swift-developers.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 8C9E8F56213F2C510069A068 /* objective-c-for-swift-developers.pdf */; };
 		8C9E8F63213F2CB10069A068 /* FilesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9E8F62213F2CB10069A068 /* FilesViewController.swift */; };
+		8C9E8F67214057390069A068 /* SampleWatermark.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9E8F66214057390069A068 /* SampleWatermark.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		8C9E8F55213F2C500069A068 /* hacking-with-swift.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "hacking-with-swift.pdf"; sourceTree = "<group>"; };
 		8C9E8F56213F2C510069A068 /* objective-c-for-swift-developers.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "objective-c-for-swift-developers.pdf"; sourceTree = "<group>"; };
 		8C9E8F62213F2CB10069A068 /* FilesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilesViewController.swift; sourceTree = "<group>"; };
+		8C9E8F66214057390069A068 /* SampleWatermark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleWatermark.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +82,7 @@
 			children = (
 				8C9E8F3A213F2C090069A068 /* AppDelegate.swift */,
 				8C9E8F3C213F2C090069A068 /* ViewController.swift */,
+				8C9E8F66214057390069A068 /* SampleWatermark.swift */,
 				8C9E8F62213F2CB10069A068 /* FilesViewController.swift */,
 				8C9E8F3E213F2C090069A068 /* Main.storyboard */,
 				8C9E8F41213F2C0B0069A068 /* Assets.xcassets */,
@@ -190,6 +193,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8C9E8F67214057390069A068 /* SampleWatermark.swift in Sources */,
 				8C9E8F3D213F2C090069A068 /* ViewController.swift in Sources */,
 				8C9E8F63213F2CB10069A068 /* FilesViewController.swift in Sources */,
 				8C9E8F3B213F2C090069A068 /* AppDelegate.swift in Sources */,
